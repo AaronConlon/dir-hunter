@@ -1,6 +1,6 @@
 {
   "name": "dir-hunter",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A simple directory command line tool to execute commands on directories",
   "main": "index.js",
   "scripts": {
