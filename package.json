@@ -1,15 +1,16 @@
 {
   "name": "dir-hunter",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A simple directory command line tool to execute commands on directories",
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "prepare": "husky install",
+    "prepare": "husky install && tsc",
     "check": "biome check --apply src/*",
     "check:fix": "biome check --apply-unsafe src/*",
     "cz": "cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepublishOnly": "npm run build"
   },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
