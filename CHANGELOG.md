@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2024-05-11)
+
+
+### Bug Fixes
+
+* :bug: windows output string is garbled code ([c64a405](https://github.com/Developer27149/dir-hunter/commit/c64a4058d0f34fba12d3cdb8b9feea7a423a49a7))
+
 ## [1.1.0](https://github.com/Developer27149/dir-hunter/compare/v1.0.0...v1.1.0) (2024-05-11)
 
 
