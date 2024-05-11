@@ -2,6 +2,8 @@
 import { Command } from "commander";
 import figlet from "figlet";
 import gradient from "gradient-string";
+// @ts-ignore
+import pkg from "../package.json";
 import { defaultAction } from "./action";
 
 console.log(
@@ -18,7 +20,7 @@ const program = new Command();
 try {
 	program
 		.name("directory-hunter")
-		.version("0.0.7")
+		.version(pkg.version)
 		.description(
 			"A simple CLI tool to search for directories and execute commands in your system",
 		)

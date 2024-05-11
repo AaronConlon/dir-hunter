@@ -1,6 +1,6 @@
 {
   "name": "dir-hunter",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "A simple directory command line tool to execute commands on directories",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,7 @@
     "prepare": "husky install && tsc",
     "check": "biome check --apply src/*",
     "check:fix": "biome check --apply-unsafe src/*",
-    "cz": "cz",
-    "release": "standard-version",
+    "cz": "git-cz",
     "prepublishOnly": "npm run build"
   },
   "lint-staged": {
@@ -38,7 +37,6 @@
     "gradient-string": "^2.0.2",
     "iconv-lite": "^0.6.3",
     "ignore": "^5.3.1",
-    "inquirer": "8.0.0",
     "inquirer-search-list": "^1.2.6",
     "kleur": "^4.1.5"
   },
@@ -51,8 +49,6 @@
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.12.10",
     "@types/picomatch": "^2.3.3",
-    "commitizen": "^4.3.0",
-    "cz-emoji": "1.3.2-canary.2",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "typescript": "^5.4.5"
