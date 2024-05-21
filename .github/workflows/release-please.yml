@@ -33,8 +33,15 @@ jobs:
           node-version: 20.11.0
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm ci
+        
+      - name: Install pnpm
+        run: npm install -g pnpm      
         if: ${{ steps.release.outputs.release_created }}
+
+      - name: Install dependencies
+        run: pnpm ci
+        if: ${{ steps.release.outputs.release_created }}
+
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
