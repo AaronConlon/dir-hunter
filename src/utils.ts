@@ -45,7 +45,9 @@ export const dynamicSelect = async (rawOptions: string[]): Promise<string> => {
 				console.log(green("\nType...\n"));
 			} else {
 				console.log(
-					`\n${bold().underline().blue("Input")} ${green(inputString)}\n`,
+					`\n${bold().underline().blue("Input")} ${bold().red("[")}${green(
+						inputString,
+					)}${bold().red("]")}\n`,
 				);
 			}
 		};
