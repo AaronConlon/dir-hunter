@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { cyan, red } from "kleur";
+import { green, red } from "kleur";
 
 export const selectDirectory = async (dirs: string[]) => {
 	inquirer.registerPrompt("search-list", require("inquirer-search-list"));
@@ -8,7 +8,7 @@ export const selectDirectory = async (dirs: string[]) => {
 		.prompt([
 			{
 				type: "search-list",
-				message: cyan("Select a directory:"),
+				message: green("Select directory:"),
 				name: "dir",
 				choices: dirs,
 			},

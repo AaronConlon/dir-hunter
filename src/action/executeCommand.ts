@@ -1,6 +1,5 @@
 import { execSync } from "node:child_process";
 import { join } from "node:path";
-// import confirm from "@inquirer/confirm";
 import { bold } from "kleur";
 import { clearScreen } from "../utils";
 import { getCommand } from "./getCommand";
