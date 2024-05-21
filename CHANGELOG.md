@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/Developer27149/dir-hunter/compare/v1.0.6...v1.0.7) (2024-05-21)
+
+
+### Bug Fixes
+
+* 🐛 execute command with history record ([f6f777b](https://github.com/Developer27149/dir-hunter/commit/f6f777ba9c9d8eb82804b4afe61c3065647e62f3))
+
 ## [1.0.6](https://github.com/Developer27149/dir-hunter/compare/v1.0.5...v1.0.6) (2024-05-21)
 
 
