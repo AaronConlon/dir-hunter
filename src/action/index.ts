@@ -3,7 +3,6 @@ import { executeCommand } from "./executeCommand";
 import { searchDirectory } from "./searchDirectory";
 import { selectDirectory } from "./selectDirectory";
 
-// default action...
 export const defaultAction = async (keyword: string, options: OptionValues) => {
 	const dirs = await searchDirectory(keyword ?? "", {
 		maxDepth: options.depth,
@@ -11,5 +10,7 @@ export const defaultAction = async (keyword: string, options: OptionValues) => {
 		skipHidden: options.skipHidden,
 	});
 	const dir = await selectDirectory(dirs);
-	executeCommand(dir, dirs, options.windows === "powershell");
+	executeCommand(dir, dirs, options.windowsPowershell === "powershell", () =>
+		defaultAction(keyword, options),
+	);
 };
