@@ -1,6 +1,6 @@
 import { execSync } from "node:child_process";
 import { join } from "node:path";
-import confirm from "@inquirer/confirm";
+// import confirm from "@inquirer/confirm";
 import { bold } from "kleur";
 import { clearScreen } from "../utils";
 import { getCommand } from "./getCommand";
@@ -12,34 +12,31 @@ export const executeCommand = async (
 	rePickDirs = () => {},
 ) => {
 	try {
-		clearScreen();
 		const command = await getCommand();
 		const absolutePath = join(process.cwd(), dir);
 		const shell = process.env.SHELL?.split("/")?.pop();
-		console.log(`\n${bold().green("Execute:")} ${command}\n`);
+		clearScreen();
+		console.log(`\n${bold().underline().green("Execute:")} ${command}\n`);
 		execSync(command, {
 			shell,
 			cwd: absolutePath,
 			stdio: "inherit",
 		});
-		// @ts-ignore
-		global?.__rl__?.close();
-		const answer = await confirm({
-			message: bold().green("\n\t\tContinue?"),
-		});
-		if (!answer) {
-			clearScreen();
-			execSync("clear", {
-				shell,
-				cwd: absolutePath,
-				stdio: "inherit",
-			});
-		} else {
-			executeCommand(dir, dirs, windowsPowershell, rePickDirs);
-		}
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		(global as any).__pause__ = true;
+		console.log(
+			bold()
+				.underline()
+				.green(
+					"\nKeep going?Type new command or press ESC to re-pick directory.\n",
+				),
+		);
+		executeCommand(dir, dirs, windowsPowershell, rePickDirs);
 	} catch (_) {
 		clearScreen();
 		console.log(_);
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		(global as any).__pause__ = false;
 		rePickDirs();
 	}
 };
