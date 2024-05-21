@@ -1,5 +1,6 @@
 import { execSync } from "node:child_process";
 import { join } from "node:path";
+import confirm from "@inquirer/confirm";
 import { bold } from "kleur";
 import { clearScreen } from "../utils";
 import { getCommand } from "./getCommand";
@@ -24,14 +25,27 @@ export const executeCommand = async (
 		});
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		(global as any).__pause__ = true;
-		console.log(
-			bold()
-				.underline()
-				.green(
-					"\nKeep going?Type new command or press ESC to re-pick directory.\n",
-				),
-		);
-		executeCommand(dir, dirs, windowsPowershell, rePickDirs);
+		console.log("\n\n\n");
+		const answer = await confirm({
+			message: "Keep going?",
+		}).catch(() => {
+			process.exit(0);
+		});
+		console.log("\n");
+
+		if (answer) {
+			executeCommand(dir, dirs, windowsPowershell, rePickDirs);
+		} else {
+			rePickDirs();
+		}
+		// console.log(
+		// 	bold()
+		// 		.underline()
+		// 		.green(
+		// 			"\nKeep going?Type new command or press ESC to re-pick directory.\n",
+		// 		),
+		// );
+		// executeCommand(dir, dirs, windowsPowershell, rePickDirs);
 	} catch (_) {
 		clearScreen();
 		console.log(_);

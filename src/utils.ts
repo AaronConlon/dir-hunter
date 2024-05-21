@@ -1,5 +1,5 @@
 import readline from "node:readline";
-import { green } from "kleur";
+import { bold, green } from "kleur";
 
 export const clearScreen = () => {
 	process.stdout.write("\x1B[2J\x1B[0f");
@@ -24,8 +24,6 @@ export const dynamicSelect = async (rawOptions: string[]): Promise<string> => {
 
 		let selectedIndex = 0;
 		const printOptions = () => {
-			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-			if ((global as any).__pause__) return;
 			clearScreen();
 			console.log(
 				`\ninput or pick an option with ${green("↑")} and ${green(
@@ -45,6 +43,10 @@ export const dynamicSelect = async (rawOptions: string[]): Promise<string> => {
 				});
 			if (inputString === "") {
 				console.log(green("\nType...\n"));
+			} else {
+				console.log(
+					`\n${bold().underline().blue("Input")} ${green(inputString)}\n`,
+				);
 			}
 		};
 		printOptions();

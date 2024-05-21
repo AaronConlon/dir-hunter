@@ -34,6 +34,7 @@
   "author": "Developer27149",
   "license": "MIT",
   "dependencies": {
+    "@inquirer/confirm": "^3.1.8",
     "@inquirer/select": "^2.3.2",
     "commander": "^12.0.0",
     "fdir": "^6.1.1",
