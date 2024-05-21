@@ -51,7 +51,7 @@ export const dynamicSelect = async (rawOptions: string[]): Promise<string> => {
 
 		const handleKeyPress = (
 			str: string,
-			key: { name: string; ctrl: boolean },
+			key: { name: string; ctrl: boolean; sequence: string },
 		) => {
 			switch (key.name) {
 				case "up":
@@ -90,9 +90,9 @@ export const dynamicSelect = async (rawOptions: string[]): Promise<string> => {
 					reject("User to back");
 					break;
 				default:
-					if (/^.$/.test(key.name) || key.name === "space") {
+					if (key.sequence.length === 1) {
 						selectedIndex = 0;
-						const keyString = key.name === "space" ? " " : key.name;
+						const keyString = key.sequence;
 						const input = keyString.toLowerCase();
 						const filteredOptions = options.filter((option) =>
 							option.toLowerCase().includes(input),
