@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/Developer27149/dir-hunter/compare/v1.0.3...v1.0.4) (2024-05-21)
+
+
+### Bug Fixes
+
+* 🐛 get command from input sequence string ([2515fb7](https://github.com/Developer27149/dir-hunter/commit/2515fb79c0619a7f5da1c470b47f6675b0e1c67d))
+
 ## [1.0.3](https://github.com/Developer27149/dir-hunter/compare/v1.0.2...v1.0.3) (2024-05-21)
 
 
