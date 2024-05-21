@@ -12,13 +12,14 @@ export const executeCommand = async (
 	rePickDirs = () => {},
 ) => {
 	try {
-		const command = await getCommand();
+		const command = await getCommand(windowsPowershell);
 		const absolutePath = join(process.cwd(), dir);
 		const shell = process.env.SHELL?.split("/")?.pop();
+		const isWindows = process.platform === "win32";
 		clearScreen();
 		console.log(`\n${bold().underline().green("Execute:")} ${command}\n`);
 		execSync(command, {
-			shell,
+			shell: isWindows ? (windowsPowershell ? "powershell" : "cmd") : shell,
 			cwd: absolutePath,
 			stdio: "inherit",
 		});

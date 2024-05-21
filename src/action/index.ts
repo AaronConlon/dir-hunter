@@ -10,7 +10,7 @@ export const defaultAction = async (keyword: string, options: OptionValues) => {
 		skipHidden: options.skipHidden,
 	});
 	const dir = await selectDirectory(dirs);
-	executeCommand(dir, dirs, options.windows === "powershell", () =>
+	executeCommand(dir, dirs, options.windowsPowershell === "powershell", () =>
 		defaultAction(keyword, options),
 	);
 };
