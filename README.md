@@ -13,8 +13,7 @@
 
 Dir Hunter 是一个Node.js命令行工具，可以帮助你快速搜索目录并执行命令。
 
-https://github.com/Developer27149/dir-hunter/assets/23721611/fc136878-9276-4502-9452-39d602af68b3
-
+https://github.com/Developer27149/dir-hunter/assets/23721611/f4ebdc5f-62fe-49f1-915d-2cfbde403a41
 
 ## 安装
 
