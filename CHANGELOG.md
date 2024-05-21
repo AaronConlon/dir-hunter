@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/Developer27149/dir-hunter/compare/v1.0.7...v1.0.8) (2024-05-21)
+
+
+### Bug Fixes
+
+* 🐛 console your command with symbol ([#17](https://github.com/Developer27149/dir-hunter/issues/17)) ([febcf69](https://github.com/Developer27149/dir-hunter/commit/febcf69b7fca520c0e0c3bfea1420bd65b2f3e1f))
+
 ## [1.0.7](https://github.com/Developer27149/dir-hunter/compare/v1.0.6...v1.0.7) (2024-05-21)
 
 
