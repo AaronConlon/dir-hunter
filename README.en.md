@@ -58,6 +58,8 @@ Options:
 - Quickly search directories and display results
 - Select directories and execute custom commands
 - Support exclusion of contents specified in `.gitignore`
+- Support historical command filtering​
+- Support Windows and macOS
 - Configurable options
 
 ## Contributing
