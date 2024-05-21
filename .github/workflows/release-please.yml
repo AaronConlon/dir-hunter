@@ -33,13 +33,13 @@ jobs:
           node-version: 20.11.0
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
-        
+
       - name: Install pnpm
         run: npm install -g pnpm      
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install --frozen-lockfile
         if: ${{ steps.release.outputs.release_created }}
 
       - run: npm publish
