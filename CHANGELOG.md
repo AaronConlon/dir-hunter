@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/Developer27149/dir-hunter/compare/v1.0.2...v1.0.3) (2024-05-21)
+
+
+### Bug Fixes
+
+* 🐛 test ([4090c36](https://github.com/Developer27149/dir-hunter/commit/4090c36c4d0612f93e831a7814cd40d796c4dff8))
+
 ## [1.0.2](https://github.com/Developer27149/dir-hunter/compare/v1.0.1...v1.0.2) (2024-05-21)
 
 
