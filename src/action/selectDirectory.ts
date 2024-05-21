@@ -15,7 +15,7 @@ export const selectDirectory = async (dirs: string[]) => {
 		])
 		.then(({ dir }: { dir: string }) => dir)
 		.catch((_) => {
-			console.log(red("Error: Invalid directory. Please try again.."));
+			console.log(red("Error: Invalid directory. Please try again."));
 			process.exit(-1);
 		});
 };
