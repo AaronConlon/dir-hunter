@@ -58,6 +58,9 @@ devDependencies:
   '@types/picomatch':
     specifier: ^2.3.3
     version: 2.3.3
+  git-cz:
+    specifier: ^4.9.0
+    version: 4.9.0
   husky:
     specifier: ^9.0.11
     version: 9.0.11
@@ -893,6 +896,11 @@ packages:
   /get-stream@8.0.1:
     resolution: {integrity: sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA==}
     engines: {node: '>=16'}
+    dev: true
+
+  /git-cz@4.9.0:
+    resolution: {integrity: sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==}
+    hasBin: true
     dev: true
 
   /git-raw-commits@4.0.0:

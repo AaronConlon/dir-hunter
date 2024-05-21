@@ -8,8 +8,12 @@
     "prepare": "husky install && tsc",
     "check": "biome check --apply src/*",
     "check:fix": "biome check --apply-unsafe src/*",
-    "cz": "git-cz",
     "prepublishOnly": "npm run build"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
@@ -49,6 +53,7 @@
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.12.10",
     "@types/picomatch": "^2.3.3",
+    "git-cz": "^4.9.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "typescript": "^5.4.5"
