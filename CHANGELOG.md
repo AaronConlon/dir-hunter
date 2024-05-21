@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/Developer27149/dir-hunter/compare/v1.0.4...v1.0.5) (2024-05-21)
+
+
+### Bug Fixes
+
+* 🐛 trigger auto release and npm publish ([#12](https://github.com/Developer27149/dir-hunter/issues/12)) ([31944f7](https://github.com/Developer27149/dir-hunter/commit/31944f7f486ee2eab1c75d0266dd3a82daa443ce))
+
 ## [1.0.4](https://github.com/Developer27149/dir-hunter/compare/v1.0.3...v1.0.4) (2024-05-21)
 
 
