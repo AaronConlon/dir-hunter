@@ -13,7 +13,7 @@ Select Language: English|  [简体中文](./README.md)
 
 Dir Hunter is a Node.js command-line tool that helps you quickly search directories and execute commands.
 
-[![Dir Hunter Demo](./record.mp4)](https://github.com/Developer27149/dir-hunter/assets/23721611/fc136878-9276-4502-9452-39d602af68b3)
+https://github.com/Developer27149/dir-hunter/assets/23721611/f4ebdc5f-62fe-49f1-915d-2cfbde403a41
 
 ## Installation
 
